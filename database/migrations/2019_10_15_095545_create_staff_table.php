@@ -24,7 +24,8 @@ class CreateStaffTable extends Migration
             $table->integer('cmnd');
             $table->string('email');
             $table->string('address');
-            $table->unsignedBigInteger('group_id');
+            $table->text('desc')->nullable();
+            $table->unsignedBigInteger('group_id')->nullable();
             $table->foreign('group_id')->references('id')->on('groups');
 
             $table->timestamps();

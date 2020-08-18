@@ -81,14 +81,18 @@
                     <div style="color: red">{{$message}}</div>
                     @enderror
                 </div>
-                <button type="submit" class="btn btn-primary">Add now!</button>
 
+                <div class="form-group">
+                    <label >Desc</label>
+                    <textarea id="editor"  class="form-control  @error('desc') is-invalid @enderror" rows="3" name="desc" ></textarea>
+                    @error('desc')
+                    <div style="color: red">{{$message}}</div>
+                    @enderror
+                </div>
+                <button type="button" id="store" class="btn btn-primary">Add now!</button>
                 <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>
-
             </form>
         </div>
-
     </div>
-
-
 @endsection
+

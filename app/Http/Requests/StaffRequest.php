@@ -31,6 +31,7 @@ class StaffRequest extends FormRequest
             'phone'=>'required|numeric',
             'email'=>'email|required',
             'cmnd'=>'required|numeric',
+
         ];
     }
 }

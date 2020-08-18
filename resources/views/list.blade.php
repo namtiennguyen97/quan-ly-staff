@@ -42,7 +42,6 @@
                     <tr>
 
                         <th scope="row">{{++$key}}</th>
-                        <td>{{$value->groupz->name}}</td>
                         <td>{{$value->name}}</td>
                         <td>{{$value->birthDay}}</td>
                         <td>{{$value->gender}}</td>
@@ -50,6 +49,7 @@
                         <td>{{$value->cmnd}}</td>
                         <td>{{$value->email}}</td>
                         <td>{{$value->address}}</td>
+                        <td><textarea>{{$value->desc}}</textarea></td>
                         <td><a href="{{route('staffs.edit', $value->id)}}" class="btn btn-primay" style="background-color: orange">Edit</a></td>
                         <td><a href="{{route('staffs.destroy', $value->id)}}" class="btn btn-primary" style="background-color: orangered" onclick="return confirm('Do you want to delete your staff?')">Delete</a></td>
                     </tr>
@@ -57,8 +57,22 @@
             @endif
             </tbody>
         </table>
-        <a class="btn btn-primary" href="{{route('staffs.create')}}">Thêm mới</a>
+        <a class="btn btn-primary" id="create" href="{{route('staffs.create')}}">Thêm mới</a>
         <a class="btn btn-primary" href="{{route('group.index')}}">Switch Group Information</a>
     </div>
+<div id="show">
 
+</div>
 @endsection
+<script>
+    $(document).ready(function () {
+        $.ajax({
+
+        })
+    });
+    // $("#create").click(function () {
+    //     $.get("create.blade.php", function (data) {
+    //         $("#show").html(data);
+    //     });
+    // });
+</script>
